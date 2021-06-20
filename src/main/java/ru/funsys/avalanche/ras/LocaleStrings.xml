@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd" >
+<properties version="1.0">
+  <comment>Сообщения приложения обмена сообщениями между РРД ГП и АСУ СТ</comment>
+  
+  <entry key="RRDST00I">[{0}] Операция выполнена успешно.</entry>
+  <entry key="RRDST01E">[{0}] При обработке запроса возникла ошибка: {1}.</entry>
+  
+  
+</properties>

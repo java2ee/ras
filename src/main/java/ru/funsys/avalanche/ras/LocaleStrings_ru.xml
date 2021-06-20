@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd" >
+<properties version="1.0">
+  <comment>Сообщения приложения обмена сообщениями между РРД ГП и АСУ СТ</comment>
+  
+  <entry key="RRDST000I">[{0}] Операция выполнена успешно.</entry>
+  <entry key="RRDST001E">[{0}] При обработке запроса возникла ошибка: {1}.</entry>
+  
+  <entry key="RAS0010E">Поле "Хост" не определено.&lt;br&gt;</entry>
+  <entry key="RAS0011E">Поле "порт" не определено.&lt;br&gt;</entry>
+  <entry key="RAS0012E">Поле "Пользователь" не определено.&lt;br&gt;</entry>
+  <entry key="RAS0013E">Поле "Пароль" не определено.&lt;br&gt;</entry>
+  <entry key="RAS0014E">Адаптер с именеи [{0}] не найден в конфигурации приложения</entry>
+  
+  <entry key="RAS10000">Сессия: [{0}]</entry>
+
+  <entry key="RAS10100">Создать сессию</entry>
+  <entry key="RAS10101">Хост</entry>
+  <entry key="RAS10102">Порт</entry>
+  <entry key="RAS10103">Пользователь</entry>
+  <entry key="RAS10104">Пароль</entry>
+  <entry key="RAS10105">Ввод</entry>
+  <entry key="RAS10106">Очистить</entry>
+  <entry key="RAS10107">Команда</entry>
+  <entry key="RAS10108">Выполнить</entry>
+
+</properties>

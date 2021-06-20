@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+	
+	<Properties>
+		<Property name="base">${sys:catalina.base}</Property>
+		<Property name="app">ras</Property>
+	</Properties>
+
+	<Appenders>
+		
+		<RollingFile name="RollingFile" fileName="${base}/logs/${app}.log"
+			filePattern="${base}/logs/arcs/${app}-%d{yyyy-MM-dd-HH}-%i.log.gz">
+			<PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+			<Policies>
+				<!-- TimeBasedTriggeringPolicy /  -->
+				<SizeBasedTriggeringPolicy size="5MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="100">
+				<!-- Nested conditions: the inner condition is only evaluated on files 
+					for which the outer conditions are true. -->
+				<Delete basePath="${base}/logs/${app}" maxDepth="2">
+					<IfFileName glob="*/${app}-*.log.gz">
+						<IfLastModified age="20d">
+							<IfAny>
+								<IfAccumulatedFileSize exceeds="100MB" />
+								<IfAccumulatedFileCount exceeds="40" />
+							</IfAny>
+						</IfLastModified>
+					</IfFileName>
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+
+	</Appenders>
+
+	<Loggers>
+		
+		<root level="debug" additivity="false">
+			<AppenderRef ref="RollingFile" />
+		</root>
+
+	</Loggers>
+
+</Configuration>

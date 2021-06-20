@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<avalanche name="RAS"
+           description="Remote Access Server"> 
+
+	<!-- Определение файлов локализации приложения                                               -->
+	<locale name="ru.funsys.avalanche.ras.LocaleStrings" />
+
+	<!--    service     - признак наличия методов реализации REST сервисов                       -->
+	<application class="ru.funsys.avalanche.ras.station.Station" name="station" function="true"  
+                 description="Сервис рабочей станцииудаленного доступа">
+
+	</application>
+
+	<!--    service     - признак наличия методов реализации REST сервисов                       -->
+	<application class="ru.funsys.avalanche.ras.Server" name="server"  
+                 description="Сервер удаленного доступа">
+	          
+		<adapter class="ru.funsys.avalanche.ras.station.StationAdapter" name="this" uri="station" />
+
+	</application>
+
+
+</avalanche>
